@@ -1,0 +1,17 @@
+{
+  "name": "exaccu",
+  "version": "1.0.0",
+  "homepage": "https://github.com/FabianGalvez/exaccu",
+  "authors": [
+    "Fabián Gálvez <fabian_galvez@hotmail.com>"
+  ],
+  "description": "Contabilidad en Linea",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

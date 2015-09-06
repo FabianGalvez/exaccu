@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contabilidad en Linea</title>
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.3.5/css/bootstrap.min.css"/>
+	<script src="/lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+	<nav class="navbar navbar-inverse  navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">EXACCU</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Inicio</a></li>
+				<li><a href"#">Contabilidad</a></li>
+				<li><a href"#">Estados Financieros</a></li>
+				<li><a href"#">Impositivo</a></li>
+			</ul>
+		    <ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+			</ul>
+		</div>
+	  </div>
+	</nav>
+    <div class="container">	  	
+		<div class="jumbotron">
+			<h1>Contabilidad Fácil.</h1>      
+			<p>Con EXECCU tus estados financieros al día</p>   
+		</div>
+		<div class="row top-buffer">
+			<div class="col-xs-8 col-xs-offset-2">
+				<div ui-view></div> <!-- This is where our views will load -->
+			</div>
+		</div>
+    </div>    
+	<div class="container">
+	  <ul class="nav nav-tabs" role="tablist">		
+		<li class="active"><a href="#">Contabilidad</a></li>
+		<li><a href="#">Estados Financieros</a></li>
+		<li><a href="#">Impositivo</a></li>        
+	  </ul>
+	</div>
+  </body>
+</html>
