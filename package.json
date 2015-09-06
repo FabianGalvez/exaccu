@@ -1,0 +1,19 @@
+{
+  "name": "exaccu",
+  "version": "1.0.0",
+  "description": "Contabilidad en Linea",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabianGalvez/exaccu.git"
+  },
+  "author": "Fabián E. Gálvez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabianGalvez/exaccu/issues"
+  },
+  "homepage": "https://github.com/FabianGalvez/exaccu#readme"
+}

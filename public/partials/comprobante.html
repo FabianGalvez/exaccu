@@ -1,0 +1,20 @@
+<a class="btn-primary bnt-lg nodecoration">Agregar Comprobante Contable</a>
+
+<table class="table">
+	<tr>
+		<td><h3>Detalle</h3></td>
+		<td></td>
+	<tr>
+	<tr>
+        <th>Código</th>
+        <th>Description</th>
+        <th>Débito</th>
+        <th>Crédito</th>        
+    </tr>
+	<tr ng-repeat=renglon in renglones">
+		<td>{{renglon.codcta}}</td>
+		<td>{{renglon.descripcion}}</td>
+		<td>{{renglon.debito}}</td>
+		<td>{{renglon.credito}}</td>
+	</tr>
+</table>
