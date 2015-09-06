@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/FabianGalvez/exaccu/issues"
   },
-  "homepage": "https://github.com/FabianGalvez/exaccu#readme"
+  "homepage": "https://github.com/FabianGalvez/exaccu#readme",
+  "dependencies": {
+    "mongoose": "^4.1.5"
+  }
 }
