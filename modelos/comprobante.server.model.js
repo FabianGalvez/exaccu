@@ -1,12 +1,12 @@
 var mongoose = require("mongoose");
 
-var comprobanteSquema  = new mongoose.Squema({
+var ComprobanteSchema  = new mongoose.Schema({
 	descripcion : String,
-	fecha : Date
+	fecha : Date,
 	creacion : {type: Date, default: Date.now},
 	debito : Number,
 	credito : Number,
 	usuario : String
 });
 
-mongoose.model ('Comprobante', comprobanteSquema);
+mongoose.model('Comprobante', ComprobanteSchema);

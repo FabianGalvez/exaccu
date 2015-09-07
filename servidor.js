@@ -2,7 +2,11 @@ var express = require('express');
 var mongoose = require('./config/mongoose');
 //var bodyParser = require('body-parser');
 
+
 var app = express();
+
+require('./modelos/comprobante.server.model');
+require('./rutas/comprobantes.server.routes.js')(app);
 
 app.use(express.static(__dirname + '/public')); 
 
