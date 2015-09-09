@@ -4,9 +4,7 @@ var mongoose = require('./config/mongoose');
 
 
 var app = express();
-
-require('./modelos/comprobante.server.model');
-require('./rutas/comprobantes.server.routes.js')(app);
+require('./rutas/comprobantes.servidor.rutas.js')(app);
 
 app.use(express.static(__dirname + '/public')); 
 
