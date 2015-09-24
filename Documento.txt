@@ -1,0 +1,25 @@
+[USUARIOS]
+
+- Cuando se ingresa a la página automáticamente se presenta la pantalla para el registro de nuevos usuarios
+- Un usuario se registra por una sola vez 
+- Para registrarse solo se necesita un correo electrónico válido y una clave de acceso nada mas.
+- Cuando un usuario está registrado presentar la pantalla de acceso 
+- Generador de claves cuando el usuario olvida su clave, enviar un correo electrónico al cliente 
+
+
+[PROCESO]  
+
+. Cuando un usuario no tiene registradas empreseas entonces se Registra Empresa, conviertiéndose
+  el usuario en el administrador de dicha empresa.
+. Cuando un usuario ya ha registrado empresas entonces al ingresar se muestran el conjunto de empresas
+  que tiene registradas.
+. Registrar Usuarios de la Empresa [automáticamente el creador de la cuenta es ya usuario de la empresa, 
+  y se puede incrementar usuarios de la empresa con la dirección de correo electrónico pudiendo ser este
+  nuevo usuario ser un administrador, un operativo o un consultor]
+. Cuando un usuario se registra y se encuentra dentro de una lista de usuarios de una empresa, de forma
+  automática se presenta la lista de empresas a las cuales puede acceder]
+.
+
+[TARIFACIÖN]
+
+. Por cada empresa registrada se tendrá que registrar un plan de acceso [Tarifa básica $10-$20]

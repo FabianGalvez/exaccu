@@ -1,20 +1,25 @@
-var express = require('express');
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var mongoose = require('./config/mongoose');
-//var bodyParser = require('body-parser');
+var express = require('./config/express');
 
-
+var db = mongoose();
 var app = express();
-require('./rutas/comprobantes.servidor.rutas.js')(app);
 
-app.use(express.static(__dirname + '/public')); 
 
-app.get('/', function (req, res) {
-  res.sendfile('index.html');
-});
+//var Comprobante = require('mongoose').model('Comprobante');
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+//var comprobante = new Comprobante({descripcion: 'Primer Comprobante'});
 
-  console.log('Corriendo en  http://%s:%s', host, port);
-});
+//comprobante.save();
+//Comprobante.find({}, function(err, comprobantes) {
+//	if(!err){
+//	console.log(comprobantes);
+//	}
+//);
+
+//require('./rutas/comprobantes.servidor.rutas.js')(app);
+
+app.listen(3000);
+module.exports = app;
+
+console.log('Corriendo ');
