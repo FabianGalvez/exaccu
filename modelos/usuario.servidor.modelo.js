@@ -7,14 +7,14 @@ var UsuarioSchema = new Schema({
 	apellido: String,
 	email: {
 			type: String,
-			match: [/.+\@.+\..+/, "Ingrese una dirección de correo válida"]
+			match: [/.+\@.+\..+/, "Ingrese una dirección de correo válida"],
 			index: true,
 			required: true
 	},
 	username: {
 		type: String,
 		trim: true,
-		unique: 'Se requiere nombre de usuario,
+		unique: 'Se requiere nombre de usuario',
 		required: true
 	},
 	password: {
@@ -43,7 +43,7 @@ var UsuarioSchema = new Schema({
 });
 
 
-UserSchema.pre('save', function(next) {
+UsuarioSchema.pre('save', function(next) {
 	if (this.password) {
 		this.salt = new
 		Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
@@ -52,22 +52,22 @@ UserSchema.pre('save', function(next) {
 	next();
 });
 
-UserSchema.methods.hashPassword = function(password) {
+UsuarioSchema.methods.hashPassword = function(password) {
 	return crypto.pbkdf2Sync(password, this.salt, 10000,64).toString('base64');
 };
 
-UserSchema.methods.authenticate = function(password) {
+UsuarioSchema.methods.authenticate = function(password) {
 	return this.password === this.hashPassword(password);
 };
 
-UserSchema.statics.findUniqueUsername = function(username, suffix,callback) {
+UsuarioSchema.statics.findUniqueUsername = function(username, suffix,callback) {
 	var _this = this;
 	var possibleUsername = username + (suffix || '');
 	_this.findOne({
 			username: possibleUsername
-	}, function(err, user) {
+	}, function(err, usuario) {
 			if (!err) {
-				if (!user) {
+				if (!usuario) {
 					callback(possibleUsername);
 				} else {
 					return _this.findUniqueUsername(username, (suffix || 0) +1, callback);
@@ -78,7 +78,7 @@ UserSchema.statics.findUniqueUsername = function(username, suffix,callback) {
 	});
 };
 
-UserSchema.set('toJSON', {
+UsuarioSchema.set('toJSON', {
 	getters: true,
 	virtuals: true
 });
